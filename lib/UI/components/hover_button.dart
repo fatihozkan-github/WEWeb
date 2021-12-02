@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 
 class HoverButton extends StatefulWidget {
-  const HoverButton({Key? key}) : super(key: key);
-
   @override
   _HoverButtonState createState() => _HoverButtonState();
 }
 
 class _HoverButtonState extends State<HoverButton> {
-  late bool showBorder = false;
+  bool showBorder = false;
   @override
   Widget build(BuildContext context) {
     return Material(

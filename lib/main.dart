@@ -1,13 +1,12 @@
-import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/material.dart';
-import 'package:url_strategy/url_strategy.dart';
-import 'package:we_web/screens/screen_loading.dart';
-import 'package:we_web/screens/screen_products.dart';
-import 'package:we_web/screens/screen_vision.dart';
-import 'package:we_web/screens/screen_welcome.dart';
+import 'package:we_web/screens/screen_feedback.dart';
 import 'package:we_web/services/service_localization.dart';
-
+import 'package:easy_localization/easy_localization.dart';
+import 'package:we_web/screens/screen_loading.dart';
+import 'package:we_web/screens/screen_welcome.dart';
+import 'package:url_strategy/url_strategy.dart';
+import 'UI/design_material/DM_assets.dart';
 import 'UI/design_material/DM_colors.dart';
+import 'package:flutter/material.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -34,12 +33,11 @@ class WeWeb extends StatelessWidget {
       locale: LocalizationService.supportedLocales.first,
       supportedLocales: [LocalizationService.supportedLocales.first],
       localizationsDelegates: context.localizationDelegates,
-      initialRoute: '/',
+      // initialRoute: '/',
       routes: {
         '/': (context) => LoadingScreen(),
         '/Hosgeldiniz': (context) => WelcomeScreen(),
-        '/Urunlerimiz': (context) => ProductsScreens(),
-        '/Vizyonumuz': (context) => VisionScreen(),
+        '/Iletisim': (context) => FeedbackScreen(),
       },
     );
   }
