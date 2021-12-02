@@ -9,7 +9,14 @@ class DecoyButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(12.0),
-      child: Text(title, style: TextStyle(color: Colors.white)),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(title, style: TextStyle(color: Colors.white)),
+          SizedBox(width: 3),
+          Icon(Icons.undo_rounded, color: Colors.white),
+        ],
+      ),
       decoration: BoxDecoration(color: UIColors.primaryColor, borderRadius: BorderRadius.circular(15.0)),
     );
   }
