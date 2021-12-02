@@ -29,7 +29,7 @@ class WelcomeScreen extends StatelessWidget {
           SizedBox(height: 60),
           _getVision(size),
           SizedBox(height: 60),
-          // _getCircles(size),
+          _getCircles(size),
           SizedBox(height: 60),
           _getFooter(),
         ],
